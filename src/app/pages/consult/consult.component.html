@@ -1,0 +1,23 @@
+
+  <h2>Lsite</h2>
+  <article class="consultation">
+      <div *ngFor="let ressource of ressources" class="card-container">
+        <a class="card" target="_blank" rel="noopener" (click)="onSelect(ressource)">
+            {{ ressource.version }}
+            <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>   
+        </a>
+      </div>
+  </article>
+
+  <h2>Détails</h2>
+  <div class="details">
+    <div *ngIf="selectedRessource">
+      <!-- <h2>{{selectedRessource.version | uppercase}}</h2> -->
+      <h2>{{selectedRessource.version }}</h2>
+      <div><span>Id : </span>{{selectedRessource.id}}</div>
+      <div><span>Version : </span>{{selectedRessource.version}}</div>
+      <div><span>Longueur : </span>{{selectedRessource.longueur}}</div>
+      <div><span>Famille : </span>{{selectedRessource.famille}}</div>
+      <button class="button" (click)="deleteRessource(selectedRessource.id)" >Supprimer</button>
+    </div>
+  </div>
