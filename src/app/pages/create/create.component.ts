@@ -6,7 +6,7 @@ import { FormBuilder  } from '@angular/forms';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrls: ['./create.component.sass']
+  styleUrls: ['./create.component.scss']
 })
 export class CreateComponent implements OnInit {
   ressource: Ressource ;

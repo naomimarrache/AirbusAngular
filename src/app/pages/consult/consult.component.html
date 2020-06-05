@@ -1,5 +1,6 @@
 
-  <h2>Lsite</h2>
+<div class="consult-container">
+  <h2>Liste</h2>
   <article class="consultation">
       <div *ngFor="let ressource of ressources" class="card-container">
         <a class="card" target="_blank" rel="noopener" (click)="onSelect(ressource)">
@@ -14,10 +15,13 @@
     <div *ngIf="selectedRessource">
       <!-- <h2>{{selectedRessource.version | uppercase}}</h2> -->
       <h2>{{selectedRessource.version }}</h2>
-      <div><span>Id : </span>{{selectedRessource.id}}</div>
-      <div><span>Version : </span>{{selectedRessource.version}}</div>
-      <div><span>Longueur : </span>{{selectedRessource.longueur}}</div>
-      <div><span>Famille : </span>{{selectedRessource.famille}}</div>
-      <button class="button" (click)="deleteRessource(selectedRessource.id)" >Supprimer</button>
+      <form class="form-group">
+        <div class="info"><span>Id : </span>{{selectedRessource.id}}</div>
+        <div class="info"><span>Version : </span>{{selectedRessource.version}}</div>
+        <div class="info"><span>Longueur : </span>{{selectedRessource.longueur}}</div>
+        <div class="info"><span>Famille : </span>{{selectedRessource.famille}}</div>
+        <button class="button" (click)="deleteRessource(selectedRessource.id)" >Supprimer</button>
+      </form>
     </div>
   </div>
+</div>
