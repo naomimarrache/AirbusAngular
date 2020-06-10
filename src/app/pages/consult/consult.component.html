@@ -10,18 +10,51 @@
       </div>
   </article>
 
-  <h2>Détails</h2>
+
   <div class="details">
     <div *ngIf="selectedRessource">
+      
+      <h2>Détails</h2>
       <!-- <h2>{{selectedRessource.version | uppercase}}</h2> -->
-      <h2>{{selectedRessource.version }}</h2>
+      <h2 class="name-ressource">{{selectedRessource.version }}</h2>
       <form class="form-group">
-        <div class="info"><span>Id</span>{{selectedRessource.id}}</div>
-        <div class="info"><span>Version <br></span>{{selectedRessource.version}}</div>
-        <div class="info"><span>Longueur<br></span>{{selectedRessource.longueur}}</div>
-        <div class="info"><span>Famille<br></span>{{selectedRessource.famille}}</div>
-        <!--<button class="button" (click)="deleteRessource(selectedRessource.id)" >Supprimer</button>-->
+        <mat-form-field class="example-full-width">
+          <mat-label>Id</mat-label>
+          <input matInput placeholder="id de la ressource" value="{{selectedRessource.id}}">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Version</mat-label>
+          <input matInput placeholder="id de la ressource" value="{{selectedRessource.version}}">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Longueur</mat-label>
+          <input matInput placeholder="id de la ressource" value="{{selectedRessource.longueur}}">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Famille</mat-label>
+          <input matInput placeholder="id de la ressource" value="{{selectedRessource.famille}}">
+        </mat-form-field>
+        <button mat-raised-button color="warn" (click)="deleteRessource(selectedRessource.id)" >Supprimer</button>
+        <button mat-raised-button color="primary" (click)="updateRessource(selectedRessource.id)" >Modifier</button>
+        <!--
+        <table>
+          <tr>
+            <div class="info"><th><span>Id</span></th><td>{{selectedRessource.id}}</td></div>
+          </tr>
+          <tr>
+            <div class="info"><th><span>Version </span></th><td>{{selectedRessource.version}}</td></div>
+          </tr>
+          <tr>
+           <div class="info"><th><span>Longueur</span></th><td>{{selectedRessource.longueur}}</td></div>
+          </tr>
+          <tr>
+            <div class="info"><th><span>Famille</span></th><td>{{selectedRessource.famille}}</td></div>
+          </tr>
+        </table>
+        <button class="button" (click)="deleteRessource(selectedRessource.id)" >Supprimer</button>
+        -->
       </form>
+      
     </div>
   </div>
 </div>

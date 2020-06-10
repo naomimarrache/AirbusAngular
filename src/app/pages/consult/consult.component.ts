@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Ressource } from './Ressource';
 import { ApiService } from 'src/service/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-consult',
@@ -12,7 +13,7 @@ export class ConsultComponent implements OnInit {
   selectedRessource: Ressource;
 
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService,private router : Router) {}
 
   ngOnInit(): void {
      this.apiService.getRessources().subscribe((res) => {
@@ -28,6 +29,13 @@ export class ConsultComponent implements OnInit {
   deleteRessource(id: number): void {
     this.apiService.deleteRessource(id).subscribe((res) => {
       // console.log(res);
+      this.router.navigate(['/']);
     });
   }
+
+
+  updateRessource(id: number) {
+    this.router.navigate(['/update']);
+  }
+
 }

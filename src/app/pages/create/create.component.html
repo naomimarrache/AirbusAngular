@@ -1,7 +1,28 @@
 
 <div class="container">
-<form [formGroup]="ressourceForm" (ngSubmit)="onSubmit(ressourceForm.value)">
+<form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm.value)">
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Version</mat-label>
+      <input matInput placeholder="Nom de la ressource" formControlName="version">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Longueur</mat-label>
+      <input matInput placeholder="Longueur de la ressource" formControlName="longueur">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Famille</mat-label>
+      <input matInput placeholder="Famille de la ressource" formControlName="famille">
+    </mat-form-field>
+  </div> 
+  
+  <button mat-raised-button color="primary" type="submit">Créer ressource</button>
 
+  <!--
   <div class="form-group">
     <label for="version">
       Version
@@ -24,6 +45,6 @@
   </div>
 
   <button class="button" type="submit">Créer ressource</button>
-
+  -->
 </form>
 </div>
