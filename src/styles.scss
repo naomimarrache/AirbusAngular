@@ -5,5 +5,23 @@ html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 
+#fond{
+  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.usinenouvelle.com/mediatheque/9/5/9/000522959_image_896x598/a380-on-ground-front-shot-jpg.png");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  
+#det{
+    background-color: rgb(238, 234, 234); /* Fallback color */
+    background-color: rgba(245, 240, 240, 0.95); /* Black w/opacity/see-through */
+    padding-bottom: 5%;
+    padding-top:5%;
+  }
+
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 
